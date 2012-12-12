@@ -81,7 +81,9 @@ public class Acceso extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        String destino = null;
         String nume = request.getParameter("numero");
+        if(nume != null){
         int num = Integer.parseInt(nume);
 
         int cuadrado = 0;
@@ -90,9 +92,11 @@ public class Acceso extends HttpServlet {
 
         request.setAttribute("cuadrado", cuadrado);
         request.setAttribute("num", num);
+        destino = "/cuadrado.jsp";
+        }
 
         ServletContext cont = getServletConfig().getServletContext();
-        RequestDispatcher reqDispatcher = cont.getRequestDispatcher("/cuadrado.jsp");
+        RequestDispatcher reqDispatcher = cont.getRequestDispatcher(destino);
         reqDispatcher.forward(request, response);
         processRequest(request, response);
 

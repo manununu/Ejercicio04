@@ -15,7 +15,7 @@
         <h1>Calcula el cuadrado de tu número</h1>
         <form action="/Ejercicio04/Acceso" method="POST">
             <input type="text" name="numero">
-            <input type="submit" value="Calcula">
+            <input type="submit" name="boton" value="Calcula">
         </form>
     </body>
 </html>

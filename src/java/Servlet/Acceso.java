@@ -83,17 +83,22 @@ public class Acceso extends HttpServlet {
 
         String destino = null;
         String nume = request.getParameter("numero");
-        if(nume != null){
-        int num = Integer.parseInt(nume);
+        if (nume != null) {
+            int num = Integer.parseInt(nume);
+            String nombre = null;
+            int cuadrado = 0;
 
-        int cuadrado = 0;
+            cuadrado = num * num;
+            if (num % 2 == 0) {
+                nombre = "Alabau";
+            } else {
+                nombre = "Carlos";
+            }
 
-        cuadrado = num * num;
-
-        request.setAttribute("cuadrado", cuadrado);
-        request.setAttribute("num", num);
-        request.setAttribute("nombre", "Alabau");
-        destino = "/cuadrado.jsp";
+            request.setAttribute("cuadrado", cuadrado);
+            request.setAttribute("num", num);
+            request.setAttribute("nombre", nombre);
+            destino = "/cuadrado.jsp";
         }
 
         ServletContext cont = getServletConfig().getServletContext();

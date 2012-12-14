@@ -92,6 +92,7 @@ public class Acceso extends HttpServlet {
 
         request.setAttribute("cuadrado", cuadrado);
         request.setAttribute("num", num);
+        request.setAttribute("nombre", "Alabau");
         destino = "/cuadrado.jsp";
         }
 

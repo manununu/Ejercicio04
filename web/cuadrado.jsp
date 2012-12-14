@@ -13,6 +13,7 @@
     </head>
     <body>
         <h1>Tu resultado</h1>
-        El cuadrado de <%= request.getAttribute("num") %> es <%= request.getAttribute("cuadrado") %>
+        El cuadrado de <%= request.getAttribute("num") %> es <%= request.getAttribute("cuadrado") %>.<br/>
+        Me cago en <%= request.getAttribute("nombre") %>.
     </body>
 </html>

@@ -14,6 +14,6 @@
     <body>
         <h1>Tu resultado</h1>
         El cuadrado de <%= request.getAttribute("num") %> es <%= request.getAttribute("cuadrado") %>.<br/>
-        Me cago en <%= request.getAttribute("nombre") %>.
+        Me cago en <%= request.getAttribute("nombre") %>.<br/>
     </body>
 </html>
